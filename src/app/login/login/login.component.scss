@@ -1,0 +1,66 @@
+.flex-container {
+    display: flex;
+   
+}
+
+.signin h1 {
+    color: rgb(31, 91, 23);
+    text-align: center;
+}
+
+.imgcontainer {
+    display: flex;
+    background-color: gray;
+    justify-content: center;
+    background: url("../../../assets/img_1.jpg");
+    height: 600px;
+    background-repeat: no;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.signin {
+    border-radius: 40px;
+    background-color: rgba(233, 239, 235, 0.7);
+    padding: 20px;
+    width: 400px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.flex-input {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+}
+
+label {
+    flex-basis: 130px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.signin button {
+    border-radius: 40px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(31, 91, 23);
+    color: white;
+    border: none;
+    margin: 20px 0;
+}
+.span{
+    margin-left: 135px;
+  }
+
+.spacer{
+    flex: 1 1 auto;
+}
+

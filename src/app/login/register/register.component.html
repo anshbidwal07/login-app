@@ -1,0 +1,47 @@
+<body class="imgcontainer">
+  <table>
+    <tr>
+      <td>
+        <img src="../../../assets/img_1.jpg" width="1000px" height="600px" alt="">
+      </td>
+      <td>
+        <form action=" " class="signup" [formGroup]="registerForm" (ngSubmit)="regUser()" style="border:1px solid #ccc">
+          <div class="container">
+            <h1 style="color: rgb(31, 91, 23);">Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <div class="flex-input">
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" formControlName="email" required>
+            </div>
+            <span class="span" style="color: red;" *ngIf="email && email.invalid && email.touched">Something went
+              wrong.</span>
+            <br>
+
+            <div class="flex-input">
+              <label for="psw"><b> Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" formControlName="psw" required>
+            </div>
+            <span class="span" style="color: red" *ngIf="psw && psw.invalid && psw.touched">At least 12
+              characters</span>
+            <br>
+
+            <div class="flex-input">
+              <label for="psw-repeat"><b>Re-password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" formControlName="pswrepeat"
+                required>
+            </div>
+            <button [disabled]="registerForm.invalid" (click)="onRegClicked()" type="submit"
+              class="registerbtn">Register</button>
+
+
+            <small class="container signup" style="margin-left: 223px; border-radius: 40px;"><a routerLink="/login">Sign in</a></small>
+
+          </div>
+        </form>
+
+      </td>
+    </tr>
+  </table>
+</body>

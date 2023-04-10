@@ -1,0 +1,31 @@
+
+<body class="imgcontainer">
+  <form action="" class="signin" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+    <h1>Sign in</h1>
+
+    <div class="flex-input">
+      <label for="uname">Username</label>
+      <input type="text" placeholder="Enter Username" name="uname" formControlName="user" required>
+      <br>
+    </div>
+    <span class="span" style="color: red" *ngIf="user && user.invalid && user.touched">Invalid user ID</span>
+    <br>
+    <div class="flex-input">
+      <label for="password">Password</label>
+      <input type="text" placeholder="Enter Password" name="password" formControlName="password" required>
+      <br>
+      <br>
+    </div>
+    <span class="span" style="color: red" *ngIf="password && password.invalid && password.touched">Invalid
+      password</span>
+    <div>
+      <button [disabled]="loginForm.invalid" (click)="loginUser()" type="submit">Login</button>
+    </div>
+
+    <small style="margin-left: 155px;"><a routerLink="./register">Register</a></small>
+  </form>
+</body> 
+
+
+
